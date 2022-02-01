@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class CatNew extends Component {
+class CatNew extends Component {
   render() {
     return (
       <>
@@ -9,3 +9,4 @@ export default class CatNew extends Component {
       );
   }
 }
+export default CatNew
