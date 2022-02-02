@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Collapse,
   Navbar,
@@ -6,21 +6,20 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
-  import catLogo from '../assets/cat-logo.png'
+  DropdownItem } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
+import catLogo from '../assets/cat-logo.png'
 
 class Header extends React.Component {
   constructor(props) {
-    super(props);
-
+    super(props)
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false
-    };
+    }
   }
   toggle() {
     this.setState({
@@ -32,16 +31,20 @@ class Header extends React.Component {
       <div className="light-blue">
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">Cat Tinder</NavbarBrand>
-          <img src={catLogo} alt="" height="50px"/>
+
+          <NavLink to="/">
+            <img src={catLogo} alt="cat logo" height="50px" />
+          </NavLink>
+
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">My Profile</NavLink>
+                <NavLink to="/catindex">See all the Cats</NavLink>
               </NavItem>
-              
+
               <NavItem>
-                <NavLink href="https://github.com/learn-academy-2021-echo/cat-tinder-frontend-instructors-austin-sarah">GitHub</NavLink>
+                <a href="https://github.com/learn-academy-2021-echo/cat-tinder-frontend-instructors-austin-sarah">GitHub</a>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
