@@ -43,6 +43,9 @@ class Header extends React.Component {
               <NavItem>
                 <NavLink href="https://github.com/learn-academy-2021-echo/cat-tinder-frontend-instructors-austin-sarah">GitHub</NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink href="https://www.aspca.org/">GitHub</NavLink>
+              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Options
