@@ -47,6 +47,59 @@ import {
 </Router>
 ```
 
+# Pushing to Github
+`$ git add .`
+`$ git commit -m ...`
+`$ git push origin ...`
+
+# Pulling down from github
+`$ git checkout main`
+`$ git pull origin main`
+`$ yarn`
+`$ git checkout -b new-branch`
+
+# Testing With Jest and Enzyme
+- Install Enzyme
+`$ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16`
+
+- Running the Tests
+`$ yarn test`
+
+Testing Imports and configurations
+```javascript
+import React from 'react'
+import Enzyme, { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+
+Enzyme.configure({ adapter: new Adapter() })
+```
+Testing Syntax Example
+```javascript
+describe("",()=>{
+    it("",()=>{
+        const renderedVariableName = shallow(<Component/>)
+        const thingBeingLookedFor = renderedVariableName.find("[attribute]")
+        const otherThingBeingLookedFor = renderedVariableName.find("ComponentName")
+        expect(thingBeingLookedFor.props().component).toEqual(SomeComponent)    
+        expect(otherThingBeingLookedFor.length).toEqual(1)
+    })
+})
+```
+Selector Syntax
+
+- [Enzyme Selector Docs](https://enzymejs.github.io/enzyme/docs/api/selector.html)
+
+Assertion Syntax
+```javascript
+    expect(<componentVariable>.<elementQueryMethod>()).<matcher>(<expectedValue>)
+```
+```javascript
+    expect(<actualThing>).<matcher>(<expectedValue>)
+```
+
+Helpful Methods
+- .debug()
+- .props()
 
 ### Cat Read Functionality
 - As a developer, I can pass the cat mock data in state to my index component.
