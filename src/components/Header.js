@@ -1,70 +1,27 @@
-import React from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
-  import catLogo from '../assets/cat-logo.png'
+import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+import catLogo from '../assets/cat-logo.png'
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
-  }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
+class Header extends Component {
   render() {
     return (
-      <div className="light-blue">
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Cat Tinder</NavbarBrand>
-          <img src={catLogo} alt="" height="50px"/>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">My Profile</NavLink>
-              </NavItem>
-              
-              <NavItem>
-                <NavLink href="https://github.com/learn-academy-2021-echo/cat-tinder-frontend-instructors-austin-sarah">GitHub</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
-    );
+      <header>
+        <NavLink to="/">
+          <img src={catLogo} alt="logo for Cat Tinder" className="cat-logo"/>
+        </NavLink>
+        <div className="nav-links">
+          <ul>
+            <NavLink to="/catindex">Meet the Cats</NavLink>
+          </ul>
+          <ul>
+            <NavLink to="/catnew">Add a Cat</NavLink>
+          </ul>
+          <ul>
+            <a target='blank'href="https://www.aspca.org/adopt-pet/adoptable-cats-your-local-shelter" id="aspca">Adopt a Cat!</a>
+          </ul>
+        </div>
+      </header>
+    )
   }
 }
 export default Header
