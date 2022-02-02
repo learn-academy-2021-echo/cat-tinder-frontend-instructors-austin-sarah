@@ -12,6 +12,7 @@ Enzyme.configure({ adapter: new Adapter() })
 //   })
 // })
 
+
 describe("When the App renders",() => {
   it("displays a header and a footer", () => {
     //Arrange

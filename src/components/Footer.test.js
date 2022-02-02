@@ -5,6 +5,7 @@ import Footer from './Footer'
 
 Enzyme.configure({ adapter: new Adapter() })
 
+
 describe("When Footer renders",() => {
   it("displays nav links", () => {
     const footer = shallow(<Footer/>)

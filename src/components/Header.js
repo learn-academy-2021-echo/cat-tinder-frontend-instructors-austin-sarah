@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Router, NavLink } from 'react-router-dom'
 import catLogo from '../assets/cat-logo.png'
 
 class Header extends Component {
