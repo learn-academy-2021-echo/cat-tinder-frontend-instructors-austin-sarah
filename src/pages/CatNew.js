@@ -4,7 +4,7 @@ class CatNew extends Component {
   render() {
     return (
       <>
-        <h1>Hello Cat New Page or ya know whatever</h1>
+        <h1>Cat New Page</h1>
       </>
       );
   }

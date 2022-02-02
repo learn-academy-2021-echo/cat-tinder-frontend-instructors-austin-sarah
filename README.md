@@ -19,8 +19,30 @@ class App extends Component{
 }
 export default App
 ```
-
+# React Router // Reactstrap Installation process
 `$ yarn add bootstrap`
 `$ yarn add reactstrap`
 Add to src/index.js: import 'bootstrap/dist/css/bootstrap.min.css'
 `$ yarn add react-router-dom@5.3.0`
+
+# React Router
+```javascript
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
+```
+
+```javascript
+<Router>
+  <Switch>
+    <Route exact path="/" component={Home} />
+    <Route path="/catindex" component={CatIndex} />
+    <Route path="/catshow" component={CatShow} />
+    <Route path="/catnew" component={CatNew} />
+    <Route path="/catedit" component={CatEdit} />
+    <Route component={NotFound}/>
+  </Switch>
+</Router>
+```

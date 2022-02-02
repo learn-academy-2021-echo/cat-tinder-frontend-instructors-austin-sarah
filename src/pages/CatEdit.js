@@ -4,7 +4,7 @@ class CatEdit extends Component {
   render() {
     return (
     <>
-      <h1>Cat Cartel is block chain money (aka cat edit)</h1>
+      <h1>Cat Edit Page</h1>
     </>);
   }
 }

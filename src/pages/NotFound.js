@@ -4,7 +4,7 @@ import React, { Component } from 'react';
   render() {
     return (
     <>
-      <h1>I can has Cheezbrgr? 404 </h1>
+      <h1>404 </h1>
     </>
     )
   }
